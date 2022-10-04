@@ -1,0 +1,36 @@
+.center-root{
+    display: flex;
+    justify-content: center;
+    color: red;
+    margin-bottom: 30px;
+}
+.Wrapper-ui-employee {
+    display: flex;
+}
+.form-employee {
+     width: 350px;
+      margin-right: 32px ;
+}
+.select-option-filter {
+    width: 142px;
+    height: 32px;
+    margin-right: 24px;
+    border-radius:5px;
+}
+@media only screen and (max-width: 1000px) {
+    .Wrapper-ui-employee {
+        display: flex;
+        flex-direction: column;
+    }
+    .container-ui-employee {
+        max-width: 850px;
+    }
+    .form-employee{
+        width: 100%;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .container-ui-employee {
+        max-width: 350px;
+    }
+  }
