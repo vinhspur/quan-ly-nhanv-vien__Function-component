@@ -18,18 +18,13 @@ const Control = () => {
   };
 
   const handleSortDescription = (value: string) => {
-    const newValueFilter = { ...valueFilter, valueDescription: value };
+    const newValueFilter = { ...valueFilter, valueDepartment: value };
     dispatch(setValueFilter(newValueFilter));
   };
 
   const handleChangeValueSearch = (value: string) => {
     const newValueFilter = { ...valueFilter, valueSearch: value };
     dispatch(setValueFilter(newValueFilter));
-  };
-
-  const handleSearchNameAndPhoneNumber = () => {
-    // const newValueFilter = {...valueFilter ,valueSearch:value}
-    // dispatch(setValueFilter(newValueFilter))
   };
 
   const handleOpenFormEmployee = () => {

@@ -17,7 +17,7 @@ const EmployeeItem = () => {
   const data = useMemo(() => {
     if (
       valueFilter.valuePosition ||
-      valueFilter.valueDescription ||
+      valueFilter.valueDepartment ||
       valueFilter.valueSearch
     ) {
       return dataSourceEmployee.filter((item) => {
@@ -30,8 +30,8 @@ const EmployeeItem = () => {
           return checkItemEmployee;
         }
         if (
-          valueFilter.valueDescription !== "" &&
-          valueFilter.valueDescription !== item.department
+          valueFilter.valueDepartment !== "" &&
+          valueFilter.valueDepartment !== item.department
         ) {
           checkItemEmployee = false;
           return checkItemEmployee;
@@ -51,7 +51,7 @@ const EmployeeItem = () => {
     }
   }, [
     valueFilter.valuePosition,
-    valueFilter.valueDescription,
+    valueFilter.valueDepartment,
     valueFilter.valueSearch,
     dataSourceEmployee,
   ]);

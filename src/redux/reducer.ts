@@ -2,7 +2,7 @@ import { AppConst } from "../const";
 import { InitStateEmployee } from "../interface/interface";
 
 const initState = {
-    employee:[
+    employee: [
         {
             name: "Nguyễn Văn Nam",
             position: AppConst.POSITION.tongGiamDoc,
@@ -28,32 +28,32 @@ const initState = {
             phoneNumber: "0944444444",
         },
     ],
-    isOpenFormAddEmployee:false,
-    isOpenFormModifyEmployee:false,
-    idModifyEmployee:null,
-    valueFilter:{
-        valuePosition:"",
-        valueDescription:"",
-        valueSearch:""
+    isOpenFormAddEmployee: false,
+    isOpenFormModifyEmployee: false,
+    idModifyEmployee: null,
+    valueFilter: {
+        valuePosition: "",
+        valueDepartment: "",
+        valueSearch: ""
     }
 
 
 }
-    
+
 
 const rootReducer = (state: InitStateEmployee = initState, action: any) => {
     debugger
     switch (action.type) {
         case "setEmployee":
-            return {...state ,employee: action.payload}
+            return { ...state, employee: action.payload }
         case "toggleFormAdd":
-            return {...state ,isOpenFormAddEmployee:action.payload}
+            return { ...state, isOpenFormAddEmployee: action.payload }
         case "toggleFormModify":
-            return {...state ,isOpenFormModifyEmployee:action.payload}
+            return { ...state, isOpenFormModifyEmployee: action.payload }
         case "setIdModifyEmployee":
-            return {...state ,idModifyEmployee:action.payload}
+            return { ...state, idModifyEmployee: action.payload }
         case "setObjectFilter":
-            return {...state ,valueFilter:{valuePosition:action.payload.valuePosition,valueDescription:action.payload.valueDescription,valueSearch:action.payload.valueSearch}}
+            return { ...state, valueFilter: { valuePosition: action.payload.valuePosition, valueDepartment: action.payload.valueDepartment, valueSearch: action.payload.valueSearch } }
         default:
             return state
     }
