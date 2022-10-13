@@ -21,7 +21,7 @@ export const setIsOpenFormModify = (isOpenFormModifyEmployee: boolean) => {
     }
 }
 
-export const setIdModifyEmployee = (id: number) => {
+export const setIdModifyEmployee = (id: number | null) => {
     return {
         type: "setIdModifyEmployee",
         payload: id

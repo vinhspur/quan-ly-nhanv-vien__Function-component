@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Employee } from "../interface/interface";
 import { AppConst } from "../const";
 import {
+  setIdModifyEmployee,
   setIsOpenFormAdd,
   setIsOpenFormModify,
   setListEmployee,
@@ -29,6 +30,7 @@ const FormEmployee = ({ isFormModify }: FormEmployeeProps) => {
   );
 
   useEffect(() => {
+    debugger
     if (idModifyEmployee || idModifyEmployee === 0) {
       setEmployee(dataSourceEmployee[idModifyEmployee]);
     }
@@ -87,6 +89,7 @@ const FormEmployee = ({ isFormModify }: FormEmployeeProps) => {
   };
 
   const handleCloseFormEmployee = () => {
+    debugger
     dispatch(setIsOpenFormAdd(false));
     dispatch(setIsOpenFormModify(false));
   };

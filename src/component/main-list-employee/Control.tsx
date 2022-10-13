@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { AppConst } from "../../const";
 import {
+  setIdModifyEmployee,
   setIsOpenFormAdd,
   setIsOpenFormModify,
   setValueFilter,
@@ -28,6 +29,7 @@ const Control = () => {
   };
 
   const handleOpenFormEmployee = () => {
+    dispatch(setIdModifyEmployee(null))
     dispatch(setIsOpenFormAdd(true));
     dispatch(setIsOpenFormModify(false));
   };
